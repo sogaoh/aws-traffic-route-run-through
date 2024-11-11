@@ -1,0 +1,17 @@
+region: ap-northeast-1
+cluster: sogaoh-spike-bastion
+service: bastion-client
+service_definition: ./ecs-service-def.jsonnet
+task_definition: ./ecs-task-def.jsonnet
+timeout: 5m0s
+plugins:
+  - name: tfstate
+    config:
+      path: ../../../../tg/live/res/ecs-cluster/terraform.tfstate
+    func_prefix: ecs_
+  - name: tfstate
+    config:
+      path: ../../../../tg/live/iam/task-exec-role/terraform.tfstate
+    func_prefix: taskRole_
+#filter_command: peco
+appspec: null

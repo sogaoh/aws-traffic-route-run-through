@@ -1,0 +1,13 @@
+services:
+  bastion:
+    build:
+      context: ./container
+      dockerfile: Dockerfile
+    volumes:
+      - ./container:/app
+    working_dir: /app
+    tty: true
+    environment:
+      - TZ=Asia/Tokyo
+      #- SLEEP_SECONDS=30
+    restart: "no"
