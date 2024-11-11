@@ -10,9 +10,9 @@ module "vpc" {
   name = local.vpc_name
   cidr = local.vpc_cidr
 
-  azs            = local.vpc_azs
-  public_subnets = local.pub_subnet_cidr
-  private_subnets  = local.pri_subnet_cidr
+  azs             = local.vpc_azs
+  public_subnets  = local.pub_subnet_cidr
+  private_subnets = local.pri_subnet_cidr
   //database_subnets  = local.db_subnet_cidr
 
   manage_default_security_group = false
@@ -24,4 +24,8 @@ module "vpc" {
   create_flow_log_cloudwatch_iam_role             = true
   create_flow_log_cloudwatch_log_group            = true
   flow_log_cloudwatch_log_group_retention_in_days = 30
+
+  enable_nat_gateway     = true
+  single_nat_gateway     = true
+  one_nat_gateway_per_az = false
 }

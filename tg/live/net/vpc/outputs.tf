@@ -8,8 +8,8 @@ output "vpc" {
 
 output "subnet" {
   value = {
-    public_ids   = module.vpc.public_subnets
-    public_cidrs = module.vpc.public_subnets_cidr_blocks
+    public_ids    = module.vpc.public_subnets
+    public_cidrs  = module.vpc.public_subnets_cidr_blocks
     private_ids   = module.vpc.private_subnets
     private_cidrs = module.vpc.private_subnets_cidr_blocks
     //database_ids   = module.vpc.database_subnets
@@ -33,8 +33,15 @@ output "vpc_flow_log" {
 
 output "route_table" {
   value = {
-    public_ids = module.vpc.public_route_table_ids
+    public_ids  = module.vpc.public_route_table_ids
     private_ids = module.vpc.private_route_table_ids
     //database_ids = module.vpc.database_route_table_ids
+  }
+}
+
+output "nat_gw" {
+  value = {
+    ids     = module.vpc.natgw_ids
+    pub_ips = module.vpc.nat_public_ips
   }
 }
