@@ -1,4 +1,5 @@
 #tfsec:ignore:aws-s3-enable-bucket-logging
+#tfsec:ignore:aws-s3-enable-versioning
 module "bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
 

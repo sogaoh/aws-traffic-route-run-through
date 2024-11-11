@@ -37,5 +37,5 @@ module "ecs_exec_log_group" {
   #version = "~> 5.5"
 
   name              = local.ecs_exec_logs_name
-  retention_in_days = 2
+  retention_in_days = 3 //Must be 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653 or 0 (zero indicates never expire logs)
 }
