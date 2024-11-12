@@ -1,8 +1,8 @@
 services:
   bastion:
     build:
-      context: ./container
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: container/Dockerfile
     volumes:
       - ./container:/app
     working_dir: /app

@@ -16,7 +16,7 @@ prune:
 # ECR build -> push
 #ARCH := --platform linux/amd64
 ARCH := --platform linux/arm64
-APPLICATION := bastion
+APPLICATION := sogaoh-bastion
 NOW := $(shell date "+%Y%m%d-%H%M")
 BLDARG_TZ := --build-arg=TZ=Asia/Tokyo
 BLDARG_SLEEP_SECONDS := --build-arg=SLEEP_SECONDS=900

@@ -1,5 +1,5 @@
 region: ap-northeast-1
-cluster: sogaoh-spike-bastion
+cluster: sogaoh-bastion-spike
 service: bastion-client
 service_definition: ./ecs-service-def.jsonnet
 task_definition: ./ecs-task-def.jsonnet
