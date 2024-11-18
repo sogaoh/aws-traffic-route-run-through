@@ -9,7 +9,7 @@ NAT Gateway と VPC Endpoint を経由した通信を発生させるサンプル
     - Public Subnet
     - Private Subnet
     - NAT Gateway
-    - VPC Endpoint (S3・Gateway型)
+    - VPC Endpoint (Fargate用に Interface型 いくつか)
 - S3
 - ECS Cluster
     - Fargate bastion
